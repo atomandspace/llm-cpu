@@ -1,0 +1,22 @@
+BINDING_PORT: '8889'
+COLLECTION_NAME: regulation
+DOCKER_CONTAINER_NAME: gpt_vector_store
+DOCS_DIR: C:\Users\ROG\PycharmProjects\llm-cpu\meta\docs\regulation
+GPU_DRIVER: '473.47'
+GPU_FREE_MEMORY: 898.0
+GPU_ID: 0
+GPU_NAME: NVIDIA GeForce GT 710
+GPU_TOTAL_MEMORY: 2048.0
+META_PATH: C:\Users\ROG\PycharmProjects\llm-cpu\meta
+MODEL_PATH: C:\Users\ROG\PycharmProjects\llm-cpu\meta\model\llama-2-7b.Q8_0.gguf
+NUM_GPU: 1
+PC_MODEL: Windows 10 AMD64 AMD64 Family 25 Model 33 Stepping 0, AuthenticAMD 10.0.22631
+PLATFORM: win32
+REPO_PATH: C:\Users\ROG\PycharmProjects\llm-cpu
+SYS_CORES: 9
+SYS_MAX_CORES: 12.0
+SYS_MAX_THREADS: 24
+SYS_MEMORY_GB: 17
+SYS_THREADS: 18
+SYS_USER_VCN: ROG
+VECTORDB_PERSIST_DIR: C:\Users\ROG\PycharmProjects\llm-cpu\meta\ckpt\vectordb

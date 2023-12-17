@@ -16,14 +16,14 @@ Execute the script, if this the first time you are using this repo on the curren
 
 # -----------------------------------------------------------------------------------------------
 # FIXED PATHS, DON'T CHANGE
-REPO_PATH = os.path.abspath(os.path.dirname(_file_))
+REPO_PATH = os.path.abspath(os.path.dirname(__file__))
 META_PATH = os.path.join(REPO_PATH, "meta")
 
 # ???????????????????????????????????????????????????????????????????????????????????????????????
 # CONFIGURABLE PATHS, CHANGE AS PER YOUR LOCAL SYSTEM
 # change these paths according to your local setup, don't commit the changes to git.
 # this is the downloaded gguf file that will be used for the RAG and inference
-MODEL_PATH = os.path.join(META_PATH, "model", "llama-2-7b-chat.Q5_K_M.gguf")
+MODEL_PATH = os.path.join(META_PATH, "model", "llama-2-7b.Q8_0.gguf")
 # this is folder where you can keep the documents on which you want to run RAG.
 # create sub-folders if required, or you can directly define the path in your script
 DOCS_DIR = os.path.join(META_PATH, "docs", "regulation")
@@ -80,7 +80,7 @@ def get_all_variables_in_master_config():
     return {var: all_vars[var] for var in all_vars if not var.startswith("__") and not callable(all_vars[var]) and var.isupper()}
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     # create meta dirs, these contain huge files and can't be pushed to repo
     if not os.path.exists(os.path.join(REPO_PATH, "../meta", "ckpt")):
         os.makedirs(os.path.join(REPO_PATH, "../meta", "ckpt"))
