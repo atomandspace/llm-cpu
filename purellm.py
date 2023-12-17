@@ -64,7 +64,7 @@ async def main(message: str):
 
     # call the chain asynchronously
     results = await llm_chain.acall(
-        message,
+        message.title(),
         callbacks=[cl.AsyncLangchainCallbackHandler()]
     )
 
