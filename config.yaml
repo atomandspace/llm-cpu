@@ -3,12 +3,12 @@ COLLECTION_NAME: regulation
 DOCKER_CONTAINER_NAME: gpt_vector_store
 DOCS_DIR: /home/vishal-singh/Desktop/Projects/llm-cpu/meta/docs/regulation
 GPU_DRIVER: 470.223.02
-GPU_FREE_MEMORY: 1459.0
+GPU_FREE_MEMORY: 1250.0
 GPU_ID: 0
 GPU_NAME: NVIDIA GeForce GT 710
 GPU_TOTAL_MEMORY: 1999.0
 META_PATH: /home/vishal-singh/Desktop/Projects/llm-cpu/meta
-MODEL_PATH: /home/vishal-singh/Desktop/Projects/llm-cpu/meta/model/llama-2-7b.Q8_0.gguf
+MODEL_PATH: /home/vishal-singh/Desktop/Projects/llm-cpu/meta/model/llama-2-7b-chat.Q8_0.gguf
 NUM_GPU: 1
 PC_MODEL: 'Linux 6.5.0-14-generic x86_64 x86_64 #14-Ubuntu SMP PREEMPT_DYNAMIC Tue
   Nov 14 14:59:49 UTC 2023'
@@ -17,7 +17,7 @@ REPO_PATH: /home/vishal-singh/Desktop/Projects/llm-cpu
 SYS_CORES: 9
 SYS_MAX_CORES: 12.0
 SYS_MAX_THREADS: 24
-SYS_MEMORY_GB: 25
+SYS_MEMORY_GB: 22
 SYS_THREADS: 18
 SYS_USER_VCN: vishal-singh
 VECTORDB_PERSIST_DIR: /home/vishal-singh/Desktop/Projects/llm-cpu/meta/ckpt/vectordb

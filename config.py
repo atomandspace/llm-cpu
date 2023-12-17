@@ -23,7 +23,7 @@ META_PATH = os.path.join(REPO_PATH, "meta")
 # CONFIGURABLE PATHS, CHANGE AS PER YOUR LOCAL SYSTEM
 # change these paths according to your local setup, don't commit the changes to git.
 # this is the downloaded gguf file that will be used for the RAG and inference
-MODEL_PATH = os.path.join(META_PATH, "model", "llama-2-7b.Q8_0.gguf")
+MODEL_PATH = os.path.join(META_PATH, "model", "llama-2-7b-chat.Q8_0.gguf")
 # this is folder where you can keep the documents on which you want to run RAG.
 # create sub-folders if required, or you can directly define the path in your script
 DOCS_DIR = os.path.join(META_PATH, "docs", "regulation")

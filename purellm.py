@@ -6,6 +6,7 @@ import yaml
 from langchain.llms import CTransformers
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
+from ctransformers import transformers
 
 import chainlit as cl
 
@@ -31,7 +32,7 @@ config = {
     'top_k': 50,
     'top_p': 0.9,
     'stream': True,
-    'threads': int(os.cpu_count() / 2)
+    'threads': int((os.cpu_count() / 2) * .8)
 }
 
 llm_init = CTransformers(
@@ -41,8 +42,9 @@ llm_init = CTransformers(
     **config
 )
 
-template = """Question: {question}
-Let's think step by step and answer truthfully.
+template = """
+<s>[INST] <<SYS>>\nYou are an truthful AI agent. You should answer all the questions responsibly.\n
+please answer this Question: {question}\n<</SYS>>\n\n Answer:[/INST]
 """
 
 
@@ -58,15 +60,16 @@ def main():
 
 
 @cl.on_message
-async def main(message: str):
+async def main(message: cl.Message):
     # retrieve the chain from the user session
     llm_chain = cl.user_session.get("llm_chain")
 
     # call the chain asynchronously
     results = await llm_chain.acall(
-        message.title(),
+        message.content,
+        return_only_outputs=True,
         callbacks=[cl.AsyncLangchainCallbackHandler()]
     )
-
+    print(results)
     # return the result
     await cl.Message(content=results["text"]).send()
